@@ -1,0 +1,116 @@
+site_name: Software Engineering Course Index
+repo_url: https://github.com/THUSE-Course/course-index.git
+repo_name: SE Course Index
+
+theme:
+  name: material
+  language: zh
+  custom_dir: theme/
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.indexes
+  palette:
+    - primary: white
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_javascript:
+  - 'https://cdn.jsdelivr.net/npm/mathjax@2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
+plugins:
+  - search
+  - glightbox
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      locale: zh
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - footnotes
+  - def_list
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  # - pymdownx.emoji:
+  #     emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - meta
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.progressbar
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.superfences:
+      custom_fences:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
+
+nav:
+  - 主页: index.md
+  - 前后端分离开发基础:
+    - basic/index.md
+    - Web 应用的历史: basic/history.md
+    - 前后端的交互: basic/web.md
+    - 前后端分离的安全问题: basic/cors.md
+    - 前后端交互鉴权问题: basic/jwt.md
+    - Web 框架: basic/framework.md
+  - 部署基础:
+    - deploy/index.md
+    - Docker: deploy/docker.md
+    - GitLab CI/CD: deploy/gitlab-ci.md
+    - SECoder: deploy/secoder.md
+    - Deployer: deploy/deployer.md
+    - SonarQube: deploy/sonarqube.md
+  - 小作业文档:
+    - handout/index.md
+    - 小作业需求文档: handout/requirement.md
+    - 小作业 API 文档: handout/api.md
+    - Django 后端文档:
+      - handout/django/index.md
+      - 知识回顾: handout/django/knowledge.md
+      - 环境配置: handout/django/env.md
+      - Django 语法: handout/django/django.md
+      - 任务汇总: handout/django/task.md
+      - 完成标准: handout/django/judge.md
+    - React (Next.js) 前端文档:
+      - handout/react/index.md
+      - Step 0 环境配置: handout/react/environment.md
+      - Step 1 TS 初探与游戏逻辑: handout/react/logic.md
+      - Step 2 绘制游戏界面: handout/react/prop.md
+      - Step 3 管理状态与全局资源: handout/react/state.md
+      - Step 4 管理全局状态: handout/react/redux.md
+      - Step 5 切换页面: handout/react/router.md
+      - Step 6 网络请求: handout/react/net.md
+      - Appendix 1 可能有用的工具: handout/react/tools.md
+      - Appendix 2 实验思考题题面: handout/react/questions.md
+    - CI/CD 文档:
+      - handout/ci-cd/index.md
+      - 后端部署: handout/ci-cd/backend.md
+      - 前端部署: handout/ci-cd/frontend.md
+  - FAQ: faq.md
