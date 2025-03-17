@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
@@ -79,6 +79,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#commit" class="md-skip">
+          跳转至
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -435,6 +440,20 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    commit 规范
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -446,6 +465,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;type&gt;：改动种类
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subject" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;subject&gt;：改动的简要描述
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;body&gt;：改动的详情
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -554,6 +619,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;type&gt;：改动种类
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subject" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;subject&gt;：改动的简要描述
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;body&gt;：改动的详情
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -573,9 +675,29 @@
   
 
 
-  <h1>commit 规范</h1>
-
-
+<h1 id="commit">commit 规范<a class="headerlink" href="#commit" title="Permanent link">&para;</a></h1>
+<p><strong>格式：<code>&lt;type&gt;: &lt;subject&gt;[\n\n&lt;body&gt;]</code></strong></p>
+<p>commit 使用<strong>英文</strong>完成，除非在其中的 <code>引用</code> 部分存在其他语言。</p>
+<h2 id="type"><code>&lt;type&gt;</code>：改动种类<a class="headerlink" href="#type" title="Permanent link">&para;</a></h2>
+<p><code>revert</code>：代码回退；
+<code>feat</code>：添加新功能或者对已有功能的修改；
+<code>fix</code>：修复已有 bug；
+<code>refactor</code>：代码重构（不改变功能，不修复 bug）；
+<code>perf</code>：优化局部代码以提升性能；
+<code>style</code>：修改代码格式，不影响代码运行；
+<code>docs</code>：修改说明文档，比如 <code>README.md</code> 等；
+<code>chore</code>：构建过程或辅助工具的变动  <br />
+<code>res</code>：对图片、音频等资源信息的更改；
+<code>other</code>：其他。
+test：增加测试或优化改善现有的测试；</p>
+<h2 id="subject"><code>&lt;subject&gt;</code>：改动的简要描述<a class="headerlink" href="#subject" title="Permanent link">&para;</a></h2>
+<ol>
+<li>使用英文；</li>
+<li>词数在30个词以内；</li>
+<li>若涉及多个内容（如多个新功能），使用分号隔开。</li>
+</ol>
+<h2 id="body"><code>&lt;body&gt;</code>：改动的详情<a class="headerlink" href="#body" title="Permanent link">&para;</a></h2>
+<p>一般不使用 <code>&lt;body&gt;</code> 部分，除非有必要的详情需要展开说明。</p>
 
 
 
@@ -596,7 +718,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年3月11日 06:24:13">2025年3月11日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025年3月17日 07:16:34">2025年3月17日</span>
   </span>
 
     
@@ -607,11 +729,12 @@
   <span class="md-source-file__fact">
     <span class="md-icon" title="贡献者">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
       
     </span>
     <nav>
       
+        <a href="mailto:yang-ym23@mails.tsinghua.edu.cn">yang-ym23</a>
     </nav>
   </span>
 
@@ -627,7 +750,7 @@
     
         <div class="md-source-date">
             <small>
-                作者: <span class='git-page-authors git-authors'></span>
+                作者: <span class='git-page-authors git-authors'><a href='mailto:yang-ym23@mails.tsinghua.edu.cn'>yang-ym23</a></span>
             </small>
         </div>
     
